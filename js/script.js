@@ -24,22 +24,28 @@ btnSwitchMode.addEventListener("click", function() {
     let to_light_mode = document.querySelector(".to-light-mode");
     let condition = body.classList.contains("dark-theme");
 
-    console.log(condition);
-
     to_dark_mode.classList.toggle("hide-cont");
     to_light_mode.classList.toggle("hide-cont");
     
     if (condition) {
         body.classList.remove("dark-theme");
         body.classList.add("light-theme");
-
     } else {
         body.classList.remove("light-theme");
         body.classList.add("dark-theme");
-
     }
-    
-    
-
-    
 });
+
+
+
+// Lógica abrir/cerrar de la ventana modal
+let btnOpenModal = document.querySelector("#openModal");
+
+btnOpenModal.addEventListener("click", openModalWindow);
+
+// Función propia para abrir ventanal modal
+function openModalWindow() {
+    let modalWindow = document.querySelector("#modalWindow");
+    modalWindow.classList.add("show-modal");   
+
+}
