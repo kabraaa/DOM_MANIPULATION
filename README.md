@@ -50,3 +50,7 @@ burger.addEventListener("click", function(){
     }
     
 });
+
+
+
+## Función built-in toggle() de JS
