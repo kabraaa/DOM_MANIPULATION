@@ -37,6 +37,20 @@ btnSwitchMode.addEventListener("click", function() {
 });
 
 
+// Cambiar imagenes de gatos
+let btnHappy = document.querySelector(".btn-happy");
+let btnSad = document.querySelector(".btn-sad");
+
+btnSad.addEventListener("click", function() {
+    let img = document.querySelector(".img-cont > img");
+    img.src = "img/sad_cat.jpg";
+});
+
+btnHappy.addEventListener("click", function() {
+    let img = document.querySelector(".img-cont > img");
+    img.src = "img/happy_cat.jpg";
+});
+
 
 // Lógica abrir/cerrar de la ventana modal
 let btnOpenModal = document.querySelector("#openModal");
