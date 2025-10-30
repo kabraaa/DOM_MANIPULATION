@@ -43,9 +43,33 @@ let btnOpenModal = document.querySelector("#openModal");
 
 btnOpenModal.addEventListener("click", openModalWindow);
 
-// Función propia para abrir ventanal modal
+// Función propia para abrir ventana modal
 function openModalWindow() {
     let modalWindow = document.querySelector("#modalWindow");
     modalWindow.classList.add("show-modal");   
-
 }
+
+let btnCloseModal = document.querySelector("#modalWindow > .modal-content > .close");
+let btnCloseModalAccept = document.querySelector("#modalWindow > .modal-content > #closeModalAccept");
+
+btnCloseModal.addEventListener("click", closeModalWindow);
+btnCloseModalAccept.addEventListener("click", closeModalWindow);
+
+// Función para cerrar la ventana modal 
+function closeModalWindow() {
+    let modalWindow = document.querySelector("#modalWindow");
+    modalWindow.classList.remove("show-modal");  
+}
+
+
+// Cerrar ventana modal cuando se detecta click fuera
+window.addEventListener("click", function(event) {
+    
+    // llama solo a la función de cerrar modal siempre que el click no sea en la propia ventana modal
+    let modal = document.querySelector("#modalWindow");
+
+    if (event.target == modal) {
+        closeModalWindow();
+    }
+
+});
