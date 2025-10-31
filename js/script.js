@@ -7,7 +7,7 @@ let menu_opt = document.querySelector(".menu");
 // Definimos evento click sobre el boton del menú
 burger.addEventListener("click", function() {
 
-    burger.classList.toggle("fa-bars");
+    burger.classLIst.toggle("fa-bars");
     burger.classList.toggle("fa-times");
     menu_opt.classList.toggle("menu-show");
 
